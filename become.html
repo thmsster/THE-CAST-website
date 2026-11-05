@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/become.css">
+    <title>Become Model | THE CAST</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Бургер-меню -->
+        <button class="burger-menu" id="burger-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Логотип -->
+        <a href="index.html" class="header-logo">THE CAST</a>
+        
+        <!-- Меню -->
+        <div class="menu" id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="women.html">MODELS</a>
+            <a href="become.html">BECOME MODEL</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </header>
+    <div class="divider"></div>
+
+    <section id="become">
+        <h1>JOIN US!</h1>
+        <p class="for-form">
+            We are always looking for new talent. No prior experience is required — just passion, <br>
+            commitment, and a unique look.
+        </p>
+
+        <form class="join-form" novalidate>
+
+            <div class="form-columns">
+
+                <!-- ЛЕВАЯ КОЛОНКА -->
+                <div class="form-column">
+                    <label class="field">
+                        <span class="field-label">First name</span>
+                        <input type="text" name="firstName" required minlength="2" maxlength="50"
+                               pattern="[A-Za-zА-Яа-яЁё\s\-]+"
+                               title="Letters, spaces and hyphens only">
+                        <span class="field-hint">Letters only. Example: <em>Anna</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Last name</span>
+                        <input type="text" name="lastName" required minlength="2" maxlength="50"
+                               pattern="[A-Za-zА-Яа-яЁё\s\-]+"
+                               title="Letters, spaces and hyphens only">
+                        <span class="field-hint">Letters only. Example: <em>Ivanova</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Date of birth</span>
+                        <input type="date" name="dob" required min="1900-01-01" max="2010-12-31">
+                        <span class="field-hint">Age from 16</span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Location</span>
+                        <input type="text" name="location" required minlength="3" maxlength="100"
+                               pattern="^[A-Za-zА-Яа-яЁё]+(?:[\s\-][A-Za-zА-Яа-яЁё]+)*,\s?[A-Za-zА-Яа-яЁё]+(?:[\s\-][A-Za-zА-Яа-яЁё]+)*$"
+                               title="Format: City, Country. Example: Minsk, Belarus">
+                        <span class="field-hint">City, Country. Example: <em>Minsk, Belarus</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Phone</span>
+                        <div class="phone-wrapper">
+                            <span id="phone-country" class="country-code"></span>
+                            <input type="tel" name="phone" id="phone-input" required
+                                   pattern="^\+?[0-9\s\-\(\)]{10,20}$"
+                                   title="International number. Example: +375 29 123-45-67">
+                        </div>
+                        <span class="field-hint">International format. Example: <em>+375 29 123-45-67</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">E-mail</span>
+                        <input type="email" name="email" required maxlength="254"
+                               pattern="^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
+                               title="Example: name@example.com">
+                        <span class="field-hint">Example: <em>name@example.com</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Instagram</span>
+                        <input type="text" name="instagram" required
+                               pattern="@?[A-Za-z0-9_.]{1,30}"
+                               title="Instagram username (e.g. @username)">
+                        <span class="field-hint">No spaces. Example: <em>@anna_model</em></span>
+                    </label>
+                </div>
+
+                <!-- ПРАВАЯ КОЛОНКА -->
+                <div class="form-column">
+                    <label class="field">
+                        <span class="field-label">Height</span>
+                        <input type="text" name="height" required
+                               pattern="\d{2,3}(\s?(cm|см))?"
+                               title="Height in cm, e.g. 175">
+                        <span class="field-hint">In cm. Example: <em>175</em> or <em>175 cm</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Chest</span>
+                        <input type="text" name="chest" required
+                               pattern="\d{2,3}(\s?(cm|см))?"
+                               title="Chest measurement in cm">
+                        <span class="field-hint">In cm. Example: <em>88</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Waist</span>
+                        <input type="text" name="waist" required
+                               pattern="\d{2,3}(\s?(cm|см))?"
+                               title="Waist measurement in cm">
+                        <span class="field-hint">In cm. Example: <em>62</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Hips</span>
+                        <input type="text" name="hips" required
+                               pattern="\d{2,3}(\s?(cm|см))?"
+                               title="Hips measurement in cm">
+                        <span class="field-hint">In cm. Example: <em>90</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Shoe size</span>
+                        <input type="text" name="shoeSize" required
+                               pattern="\d{2}(\.\d)?"
+                               title="Shoe size, e.g. 38">
+                        <span class="field-hint">EU size. Example: <em>38</em></span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Tattoos</span>
+                        <input type="text" name="tattoos" required maxlength="200">
+                        <span class="field-hint">Describe or write <em>none</em> if you have none</span>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Scars / piercing</span>
+                        <input type="text" name="scars" required maxlength="200">
+                        <span class="field-hint">Describe or write <em>none</em> if you have none</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- ФОТО -->
+            <div class="photo-row">
+                <label class="photo-upload">
+                    <input type="file" name="photo1" accept="image/jpeg,image/png,image/webp" required>
+                    <span>CLOSE-UP</span>
+                    <span class="field-hint">Please upload photo</span>
+                </label>
+
+                <label class="photo-upload">
+                    <input type="file" name="photo2" accept="image/jpeg,image/png,image/webp" required>
+                    <span>PROFILE</span>
+                    <span class="field-hint">Please upload photo</span>
+                </label>
+
+                <label class="photo-upload">
+                    <input type="file" name="photo3" accept="image/jpeg,image/png,image/webp" required>
+                    <span>FULL LENGTH</span>
+                    <span class="field-hint">Please upload photo</span>
+                </label>
+            </div>
+
+            <!-- ЧЕКБОКСЫ -->
+            <div class="checkboxes">
+                <label class="checkbox">
+                    <input type="checkbox" name="agree1" required>
+                    <span>I confirm that I am over 18 or have permission from a parent or legal guardian</span>
+                </label>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="agree2" required>
+                    <span>I have read and understood the <a href="privacy.html" class="policy">Privacy Policy</a></span>
+                </label>
+            </div>
+
+            <!-- КНОПКА -->
+            <button type="submit" class="join-btn">JOIN THE CAST</button>
+
+        </form>
+
+         <div class="success-modal" id="successModal">
+            <div class="success-modal-content">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h2>SUCCESS</h2>
+                <p>Thank you! Your application has been sent successfully.<br>We will contact you soon.</p>
+                <button type="button" class="success-btn" id="closeSuccessBtn">CLOSE</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-menu">
+                <a href="contact.html">CONTACT US</a>
+                <a href="privacy.html">PRIVACY POLICY</a>
+                <a href="#" id="open-cookie">COOKIE SETTINGS</a>
+            </div>
+            <p class="footer-copy">All rights reserved. Copyright &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Библиотека для телефонов -->
+    <script src="https://unpkg.com/libphonenumber-js@1.10.44/bundle/libphonenumber-js.min.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
